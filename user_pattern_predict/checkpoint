@@ -1,0 +1,2 @@
+model_checkpoint_path: "saved_user_3_pattern_model.cpkt"
+all_model_checkpoint_paths: "saved_user_3_pattern_model.cpkt"
