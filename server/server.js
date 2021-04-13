@@ -13,7 +13,7 @@ var conn = config.getConnection;
 
 http
   .createServer((req, res) => {
-    conn.query("select * from users ", (err, results, fields) => {
+    conn.query("select * from student ", (err, results, fields) => {
       if (err) throw err;
       console.log(results);
       res.end();
