@@ -4,7 +4,8 @@ module.exports = {
   getConnection: mysql.createConnection({
     host: "localhost",
     user: "root",
-    password: "asdf112!",
-    database: "nodejsdb",
+    port: 3305,
+    password: "123456",
+    database: "give_me_db",
   }),
 };
