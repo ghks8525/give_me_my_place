@@ -1,6 +1,130 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <data>
+
+        <variable
+            name="listener"
+            type="com.example.myapplication.givememyplace.ui.login.LoginActivity" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gl_h1"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.30" />
+
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gl_h2"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.60" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gl_h3"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.10" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gl_h4"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.90" />
+
+        <TextView
+            android:id="@+id/al_tv_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="150dp"
+            android:text="로그인"
+            android:textSize="22sp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/gl_h3"/>
+
+        <EditText
+            android:id="@+id/al_et_id"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/bg_rect_full_gray_r10"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:hint="아이디"
+            android:textColorHint="@color/gray_adadad"
+            app:layout_constraintTop_toBottomOf="@id/al_tv_login"
+            app:layout_constraintStart_toEndOf="@id/gl_h3"
+            app:layout_constraintEnd_toStartOf="@id/gl_h4"/>
+
+        <EditText
+            android:id="@+id/al_et_pw"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:padding="10dp"
+            android:background="@drawable/bg_rect_full_gray_r10"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:inputType="textPassword"
+            android:hint="비밀번호"
+            android:textColorHint="@color/gray_adadad"
+            app:layout_constraintTop_toBottomOf="@id/al_et_id"
+            app:layout_constraintStart_toEndOf="@id/gl_h3"
+            app:layout_constraintEnd_toStartOf="@id/gl_h4"/>
+
+        <TextView
+            android:id="@+id/al_tv_regist"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:onClick="@{listener.onClick}"
+            android:text="회원가입 >"
+            android:textColor="@color/gray_808080"
+            android:textSize="16sp"
+            app:layout_constraintTop_toBottomOf="@id/al_et_pw"
+            app:layout_constraintStart_toEndOf="@id/gl_h3"/>
+
+        <TextView
+            android:id="@+id/al_tv_find_pw"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="15dp"
+            android:text="비밀번호 찾기 >"
+            android:textColor="@color/gray_808080"
+            android:textSize="16sp"
+            app:layout_constraintTop_toBottomOf="@id/al_et_pw"
+            app:layout_constraintStart_toEndOf="@id/al_tv_regist"/>
+
+        <Button
+            android:id="@+id/al_btn_login"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="30dp"
+            android:onClick="@{listener::onClick}"
+            android:text="로그인"
+            android:textSize="20sp"
+            android:background="@drawable/bg_rect_full_blue_r10"
+            app:layout_constraintStart_toStartOf="@id/gl_h3"
+            app:layout_constraintEnd_toEndOf="@id/gl_h4"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

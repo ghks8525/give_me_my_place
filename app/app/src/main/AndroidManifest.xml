@@ -13,9 +13,9 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.MyApplication">
+        android:theme="@style/Theme.AppCompat.NoActionBar">
         <activity
-            android:name=".MainActivity"
+            android:name=".givememyplace.SplashActivity"
             tools:ignore="Instantiatable">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -23,6 +23,26 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity android:name=".givememyplace.ui.home.HomeActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity android:name=".givememyplace.ui.login.LoginActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity android:name=".givememyplace.ui.login.RegistActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity android:name=".givememyplace.ui.home.MyActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity android:name=".givememyplace.ui.home.AdminPlaceDialog"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.TranslucentClean"/>
+
+        <activity android:name=".givememyplace.ui.home.UserPlaceDialog"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.TranslucentClean"/>
 
         <service android:name="org.eclipse.paho.android.service.MqttService" />
 
